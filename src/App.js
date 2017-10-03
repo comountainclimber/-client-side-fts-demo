@@ -16,6 +16,7 @@ class App extends Component {
     fetch('https://api.myjson.com/bins/ygo8t')
       .then((results) => results.json())
       .then((results) => {
+        let logged = false
         this.setState({
           results: results.map((result, i) => {
             const copy = {...result}
@@ -26,6 +27,10 @@ class App extends Component {
               _copy.superHeavy = [...results];
               return _copy;
             })
+            if (!logged) {
+              console.log(JSON.stringify(copy))
+            }
+            logged = true
             return copy;
           }),
           loading: false
