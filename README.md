@@ -1,4 +1,4 @@
-Client side search can be extremely powerful... This is color data set is arbitrarily massive to show how quick a simple indexing can be. A single object in the collection being searched looks like the following:
+Client side search can be extremely powerful... This color data set is arbitrarily massive to show how quick a simple indexing can be. A single object in the collection being searched looks like the following:
 
 <pre>
 

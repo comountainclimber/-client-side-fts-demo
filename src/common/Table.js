@@ -232,6 +232,7 @@ function handleSearch(text) {
 
     const results = this.index.search(`${text}*`);
     const mapped = [];
+
     this.props.data.forEach((_data) => {
         results.forEach(result => (
             _data.name === result.ref ? mapped.push(_data) : undefined
