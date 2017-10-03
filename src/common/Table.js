@@ -107,16 +107,16 @@ const ThGenerator = ({columns, sortColumnFunc}) => (
                     style={{
                         width: column.width,
                         cursor: column.sortable ? 'pointer' : 'default',
-                        backgroundColor: column.sorting ? 'yellow' : ''
+                        backgroundColor: column.sorting && column.sortable ? 'yellow' : ''
                     }}
                 >
                     <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                         {column.header}
-                        {column.sorting && column.ascending &&
+                        {column.sorting && column.ascending && column.sortable &&
                             <div style={{fontSize: 10, marginLeft: 5}}>
                                 ▲
                             </div>
-                        } {column.sorting && !column.ascending &&
+                        } {column.sorting && !column.ascending && column.sortable &&
                             <div style={{fontSize: 10, marginLeft: 5}}>
                                 ▼
                             </div>
